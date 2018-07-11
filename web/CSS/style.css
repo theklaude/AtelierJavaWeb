@@ -56,4 +56,8 @@ and open the template in the editor.
   white-space: nowrap;
   border-bottom: 1px solid #d0d0d0;
 }
+.flag{
+    height: 25px;
+    weight: 25px;
+}
 

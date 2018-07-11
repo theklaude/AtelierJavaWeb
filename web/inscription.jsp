@@ -4,20 +4,22 @@
     Author     : theklaude
 --%>
 
+
+
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Atos shop</title>
+        <title>JSP Page</title>
+        <c:import url="/Template/_STYLESHEET.jsp"/>
     </head>
-    <body>
 
-        <div class="row">
+    <c:import url="/Template/_MENU.jsp"/>
+    <body>
+        <div class="container">
+            <div class="row">
             <div class="col-xs-6 col-md-4"></div>
             <div class="col-xs-6 col-md-4">
                 <div class="card-body">
@@ -42,7 +44,7 @@
                         <input type="number" class="form-control" id="formGroupExampleInput4" placeholder="zipcode" name="zipcode">
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
                     </div>
 
                 </form>
@@ -50,9 +52,8 @@
             <div class="col-xs-6 col-md-4"></div>
         </div>
 
-        <!-- jQuery first, then Tether, then Bootstrap JS. -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        </div>
+        <c:import url="/Template/_FOOTER.jsp"/>
+        <c:import url="/Template/_JAVASCRIPTS.jsp"/>
     </body>
 </html>
