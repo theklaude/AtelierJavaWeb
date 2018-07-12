@@ -23,4 +23,9 @@ public class ClientService {
     public List<Client> lister(){
         return dao.lister();
     }
+    
+    public Client connexion(String login, String pswd){
+        return dao.findByLoginAndPassword(login, pswd);
+    }
+
 }

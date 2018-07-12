@@ -8,6 +8,7 @@ package atos.shop.servlet;
 import atos.shop.entity.Client;
 import atos.shop.service.ClientService;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,31 +19,31 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author theklaude
  */
-@WebServlet(name = "InscriptionClientServlet", urlPatterns = {"/inscription"})
-public class InscriptionClientServlet extends HttpServlet {
+@WebServlet(name = "LoginServlet", urlPatterns = {"/login"})
+public class LoginServlet extends HttpServlet {
 
-    private ClientService service= new ClientService();
+    private ClientService service = new ClientService();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("inscription.jsp").forward(req, resp);
+        req.getRequestDispatcher("login.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String nom = req.getParameter("nom");
-        String prenom = req.getParameter("prenom");
+        // 1.Connexion
         String login = req.getParameter("pseudo");
-        String password = req.getParameter("password");
-        
-        Client cli = new Client();
-        cli.setNom(nom);
-        cli.setPrenom(prenom);
-        cli.setPseudo(login);
-        cli.setPassword(password);
-        service.ajouter(cli);
-
-        //Demander au navigateur de faire une req HTTP GET vers...
-        resp.sendRedirect("mon-compte");
+        String pswd = req.getParameter("password");
+        Client cli = service.connexion(login, pswd);
+        if (cli==null){
+            // Renvoie vers page de login, car pas trouvé
+            resp.sendRedirect("error_connection.jsp");
+        }else{ //trouvé
+            
+            //Enregistre client en session
+            req.getSession().setAttribute("clientConnecte", cli);
+            resp.sendRedirect("home");
+        }
 
     }
 

@@ -25,8 +25,8 @@ public class Client implements Serializable {
     
     private String nom;
     private String prenom;
-    private String adresse;
-    private Integer zipcode;
+    private String pseudo;
+    private String password;
 
     public Long getId() {
         return id;
@@ -52,20 +52,20 @@ public class Client implements Serializable {
         this.prenom = prenom;
     }
 
-    public String getAdresse() {
-        return adresse;
+    public String getPseudo() {
+        return pseudo;
     }
 
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
+    public void setPseudo(String pseudo) {
+        this.pseudo = pseudo;
     }
 
-    public Integer getZipcode() {
-        return zipcode;
+    public String getPassword() {
+        return password;
     }
 
-    public void setZipcode(Integer zipcode) {
-        this.zipcode = zipcode;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     

@@ -31,4 +31,15 @@ public class ClientDAO {
         return query.getResultList();
     }
 
+    public Client findByLoginAndPassword(String login, String password) {
+        try {
+            EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+
+            return (Client) em.createQuery("SELECT c FROM Client c WHERE c.pseudo=:log AND c.password=:pwd")
+                    .setParameter("pwd", password).setParameter("log", login).getSingleResult();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
 }

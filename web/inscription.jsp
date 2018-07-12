@@ -36,12 +36,12 @@
                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="prenom" name="prenom">
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput2">Adresse</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="adresse" name="adresse">
+                        <label for="formGroupExampleInput2">Pseudo</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="pseudo" name="pseudo">
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput2">Zipcode</label>
-                        <input type="number" class="form-control" id="formGroupExampleInput4" placeholder="zipcode" name="zipcode">
+                        <label for="formGroupExampleInput2">Mot de passe</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="password" name="password">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Enregistrer</button>

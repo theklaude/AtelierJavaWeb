@@ -1,8 +1,3 @@
-<script src="../JS/bootstrap.bundle.js" type="text/javascript"></script>
-<script src="../JS/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="../JS/bootstrap.js" type="text/javascript"></script>
-<script src="../JS/bootstrap.min.js" type="text/javascript"></script>
-<script src="../jquery/jquery.js" type="text/javascript"></script>
-<script src="../jquery/jquery.min.js" type="text/javascript"></script>
-<script src="../jquery/jquery.slim.js" type="text/javascript"></script>
-<script src="../jquery/jquery.slim.min.js" type="text/javascript"></script>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script src="<c:url value="/jquery/jquery.min.js"/>" type="text/javascript"></script>
+<script src="<c:url value="/JS/bootstrap.min.js"/>" type="text/javascript"></script>

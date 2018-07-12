@@ -4,6 +4,9 @@
     Author     : theklaude
 --%>
 
+
+
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -20,23 +23,15 @@
                 <div class="col-xs-6 col-md-4"></div>
                 <div class="col-xs-6 col-md-4">
                     <div class="card-body">
-                        <h2 class="card-title">Hello, please log in:</h2>
+                        <h2 class="card-title">Login Error</h2>
                         <br><br>
                     </div>
 
-                    <form method="POST">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="pseudo" name="pseudo">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="password" name="password">
-                        </div>
+                    <c:url var="url" value="/login.jsp"/>
+                    <h2>Invalid user name or password.</h2>
 
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Connect</button>
-                        </div>
-
-                    </form>
+                    <p>Please enter a user name or password that is authorized to access this 
+                        application. Click here to <a href="${url}">Try Again</a></p>
                 </div>
                 <div class="col-xs-6 col-md-4"></div>
             </div>

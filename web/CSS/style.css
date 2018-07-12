@@ -7,7 +7,15 @@ and open the template in the editor.
     Created on : 10 juil. 2018, 10:07:48
     Author     : theklaude
 */
+body {
+  padding-top: 54px;
+}
 
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
 .table {
   display: flex;
   flex-flow: column nowrap;
@@ -57,7 +65,7 @@ and open the template in the editor.
   border-bottom: 1px solid #d0d0d0;
 }
 .flag{
-    height: 25px;
-    weight: 25px;
+    height: 35px;
+    weight: 35px;
 }
 
