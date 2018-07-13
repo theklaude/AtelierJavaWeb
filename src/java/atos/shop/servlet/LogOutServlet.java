@@ -23,7 +23,10 @@ import javax.servlet.http.HttpServletResponse;
 public class LogOutServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+        // Supprime ma session
         req.getSession().invalidate();
+        
         resp.sendRedirect("home");
     }
 

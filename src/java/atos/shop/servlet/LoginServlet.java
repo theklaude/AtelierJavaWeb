@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
         Client cli = service.connexion(login, pswd);
         if (cli==null){
             // Renvoie vers page de login, car pas trouvé
-            resp.sendRedirect("error_connection.jsp");
+            resp.sendRedirect("error-connection.jsp");
         }else{ //trouvé
             
             //Enregistre client en session

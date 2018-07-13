@@ -27,7 +27,7 @@
                         <br><br>
                     </div>
 
-                    <c:url var="url" value="/login.jsp"/>
+                    <c:url var="url" value="/login"/>
                     <h2>Invalid user name or password.</h2>
 
                     <p>Please enter a user name or password that is authorized to access this 

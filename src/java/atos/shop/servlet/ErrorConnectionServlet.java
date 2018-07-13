@@ -22,8 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ErrorConnectionServlet", urlPatterns = {"/error-connection"})
 public class ErrorConnectionServlet extends HttpServlet {
 
-    private ClientService service = new ClientService();
-
+  
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("error-connection.jsp").forward(req, resp);

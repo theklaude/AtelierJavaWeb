@@ -18,8 +18,9 @@
         <div class="container">
             <div class="row">
                 <c:import url="_TITLE.jsp"/>
-
+             
                 <div class="col-lg-9">CONTENU PAR DEFAUT</div>
+             
             </div>
         </div>
         <c:import url="_FOOTER.jsp"/>

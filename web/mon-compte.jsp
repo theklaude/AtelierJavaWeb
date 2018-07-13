@@ -18,12 +18,10 @@
         <div class="container">
             <div class="row">
                 <c:import url="/Template/_TITLE.jsp"/>
-
                 <div class="col-lg-9">
-                   
+
                     <h5> Hello <c:out value="${clientConnecte.pseudo}" default="guest"/>!
                     </h5>
-                 
                 </div>
             </div>
         </div>
